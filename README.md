@@ -16,6 +16,7 @@ Extraire les offres d'emploi de différents sites web.
 - `requests` pour les requêtes HTTP.
 - `BeautifulSoup` ou `lxml` pour l'analyse du HTML/XML.
 - `selenium` pour les sites web riches en JavaScript.
+
 ---
 ### API REST
 
@@ -28,6 +29,7 @@ Fournir un moyen pour les applications front-end d'accéder aux données d'offre
 - `Flask` ou `Django` pour le framework web.
 - `Flask-RESTful` ou `Django REST framework` pour la création de l'API.
 
+---
 ### Base de Données PostgreSQL
 
 #### Objectif
