@@ -51,7 +51,6 @@ def scraping(job_cards):
         driver.quit()
 
 
-
 if __name__ == '__main__':
     
     logging.info("Scraping des annonces d'emploi")
