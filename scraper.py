@@ -11,6 +11,7 @@ driver = webdriver.Safari()
 
 # URL de départ
 url = 'https://fr.indeed.com/jobs?q=Python&fromage=1&vjk=1b833041c0b8707f'
+
 driver.get(url)
 
 jobs = []
