@@ -2,9 +2,8 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-import time
 
-# Configurez Selenium avec Safari
+# Configure Selenium avec Safari
 driver = webdriver.Safari()
 
 # URL de départ
@@ -12,7 +11,7 @@ url = 'https://fr.indeed.com/jobs?q=Python&fromage=1&vjk=1b833041c0b8707f'
 driver.get(url)
 
 jobs = []
- # Obtenez le code source de la page actuelle
+ # Obtient le code source de la page actuelle
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
 
@@ -22,7 +21,7 @@ job_cards = soup.find_all('td', class_='resultContent')
 
 def extract_jobs(job_cards):
 
-# Extrayez les informations de chaque carte de travail
+# Récolte les informations ce charque card
     for card in job_cards:
         job_title = card.find('h2', class_='jobTitle').get_text(strip=True)
         company_name_element = card.find('span', {'data-testid': 'company-name'})
@@ -41,6 +40,7 @@ driver.quit()
 
 if __name__ == '__main__':
     extract_jobs(job_cards)
-    # Affichez ou traitez les emplois extraits
+    
+    # Affiche ou traitez les emplois extraits
     for job in jobs:
         print(job)
