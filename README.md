@@ -38,4 +38,4 @@ Stocker les données des offres d'emploi.
 
 #### Outils
 
-- `psycopg2` ou `SQLAlchemy` pour la connexion à la base de données et les opérations.
+- `psycopg2` et `SQLAlchemy` pour la connexion à la base de données et les opérations.
