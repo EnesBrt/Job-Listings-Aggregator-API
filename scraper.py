@@ -36,10 +36,7 @@ def extract_jobs(job_cards):
             'Job Type': job_type_element.get_text(strip=True) if job_type_element else 'Non spécifié'
         })
             
-
 driver.quit()
-
-
 
 
 if __name__ == '__main__':
