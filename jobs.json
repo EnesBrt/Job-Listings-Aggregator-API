@@ -1,0 +1,194 @@
+[
+    {
+        "Job Title": "Software Engineer (Python / React)",
+        "Job Location": "Paris",
+        "Company Name": "Manty",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur backend senior CDI - Nantes (Java/Python)",
+        "Job Location": "Nantes",
+        "Company Name": "Artelys",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Developer Fullstack Python/react- Lyon",
+        "Job Location": "Paris",
+        "Company Name": "The Product Crew",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur/se Backend Python",
+        "Job Location": "Paris",
+        "Company Name": "The Product Crew",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur/se Fullstack Python/React",
+        "Job Location": "Paris",
+        "Company Name": "The Product Crew",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Ing\u00e9nieur de d\u00e9veloppement Python sur la virtualisation des r\u00e9seaux F/H",
+        "Job Location": "Lannion",
+        "Company Name": "Orange",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Stage - PoC ordonnanceur AirFlow/Python dans les cloud public et priv\u00e9 F/H",
+        "Job Location": "Marseille - 3\u00e8me Arrondissement",
+        "Company Name": "Orange",
+        "Job Type": "Stage"
+    },
+    {
+        "Job Title": "Senior Python Backend Engineer",
+        "Job Location": "Paris",
+        "Company Name": "Yavin",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur Python (H/F)",
+        "Job Location": "Paris",
+        "Company Name": "Groupe SII",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Ing\u00e9nieur Int\u00e9gration Logiciel QA (Python, Linux, Git) - F/H",
+        "Job Location": "Paris",
+        "Company Name": "Aldebaran - United Robotics Group",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "STAGE - Ing\u00e9nieur - D\u00e9veloppement Logiciel de Test - Python / Tcl/Tk - F/H",
+        "Job Location": "Moirans",
+        "Company Name": "Thales",
+        "Job Type": "Stage"
+    },
+    {
+        "Job Title": "Ing\u00e9nieur(e) D\u00e9veloppeur / Int\u00e9grateur (C++/Python) (H/F)",
+        "Job Location": "Nantes",
+        "Company Name": "Thales",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Tech Lead Python dans le domaine des GNSS (H/F)",
+        "Job Location": "Toulouse",
+        "Company Name": "Thales",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "une Ing\u00e9nieur(e) Validation (Python) (H/F)",
+        "Job Location": "Nantes",
+        "Company Name": "Thales",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Ing\u00e9nieur D\u00e9veloppement Python",
+        "Job Location": "Bordeaux",
+        "Company Name": "Thales",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur(euse) Python confirm\u00e9(e) / Consultant(e) AWS",
+        "Job Location": "Paris",
+        "Company Name": "Innovela",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur(euse) Fullstack Python / Angular",
+        "Job Location": "Paris",
+        "Company Name": "Innovela",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Ing\u00e9nieur D\u00e9veloppement Python et C - PARIS (H/F)",
+        "Job Location": "Paris",
+        "Company Name": "Capgemini",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Fullstack Software Engineer (Python, ReactJS)",
+        "Job Location": "Paris",
+        "Company Name": "GitGuardian",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Staff Software Engineer (Python)",
+        "Job Location": "Paris",
+        "Company Name": "GitGuardian",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Backend Software Engineer (Python)",
+        "Job Location": "Paris",
+        "Company Name": "GitGuardian",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Trading Systems - D\u00e9veloppeur Python - H/F",
+        "Job Location": "Paris",
+        "Company Name": "MARGO",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Stage - D\u00e9veloppeur Python pour Web Scraping Automatisation F/H",
+        "Job Location": "33281 Merignac",
+        "Company Name": "Enedis",
+        "Job Type": "Stage"
+    },
+    {
+        "Job Title": "Ing\u00e9nieur Back-end Python",
+        "Job Location": "Bordeaux",
+        "Company Name": "Adservio",
+        "Job Type": "Autres"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur Python H/F",
+        "Job Location": "Paris",
+        "Company Name": "EXTIA",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur Python H/F",
+        "Job Location": "Montpellier",
+        "Company Name": "EXTIA",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur Python (H/F)",
+        "Job Location": "Paris",
+        "Company Name": "EXTIA",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "Stage - D\u00e9veloppeur Python (H/F)",
+        "Job Location": "Toulouse",
+        "Company Name": "Capgemini",
+        "Job Type": "Stage"
+    },
+    {
+        "Job Title": "Lead D\u00e9veloppeur Python - Rennes - CDI (f/m/x)",
+        "Job Location": "Rennes",
+        "Company Name": "IDnow France",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur.se Python Exp\u00e9riment\u00e9.e (f/d/m)- Rennes",
+        "Job Location": "Rennes",
+        "Company Name": "IDnow France",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur Python",
+        "Job Location": "Vincennes",
+        "Company Name": "Accenta",
+        "Job Type": "CDI"
+    },
+    {
+        "Job Title": "D\u00e9veloppeur-D\u00e9veloppeuse junior(e) Python/Django",
+        "Job Location": "Toulouse",
+        "Company Name": "Makina Corpus",
+        "Job Type": "CDI"
+    }
+]

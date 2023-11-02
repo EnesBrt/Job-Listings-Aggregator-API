@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import logging
+import json
 
 # Configuration du logging pour le débogage
 logging.basicConfig(level=logging.INFO)
@@ -36,9 +37,9 @@ def scraping(job_cards):
             job_type = card.find_element(By.CSS_SELECTOR, 'div.sc-dQEtJz').text
             
             jobs.append({
-                'Company Name': company_name if company_name else 'Unspecified',
                 'Job Title': job_title if job_title else 'Unspecified',
                 'Job Location': job_location if job_location else 'Unspecified',
+                'Company Name': company_name if company_name else 'Unspecified',
                 'Job Type': job_type if job_type else 'Unspecified'
             })
 
@@ -62,5 +63,9 @@ if __name__ == '__main__':
             print(job)
     else:
         logging.info("Aucune annonce d'emploi n'a été trouvée")
+        
+    with open('jobs.json', 'w') as outfile:
+        json.dump(jobs, outfile)
+        
     
     logging.info("Fin du programme")
