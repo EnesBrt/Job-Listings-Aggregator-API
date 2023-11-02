@@ -8,25 +8,26 @@ import logging
 # Configuration du logging pour le débogage
 logging.basicConfig(level=logging.INFO)
 
-# Configurez Safari pour qu'il soit utilisé avec le WebDriver
+# Initialisation du navigateur
 driver = webdriver.Safari()
 driver.implicitly_wait(10)  # Attend jusqu'à 10 secondes pour que les éléments soient trouvés
 
-
+# Ouverture de la page
 url = 'https://www.welcometothejungle.com/fr/jobs?query=Python'
 driver.get(url)
 
-# Attendez que les cartes d'emploi soient chargées
+# Attendre que la page soit charge
 WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR"))
 )
 
-# Utilisez Selenium pour obtenir les informations plutôt que BeautifulSoup
+# Recherche des éléments
 job_cards = driver.find_elements(By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR")
 
 jobs = []
     
 
+# Fonction pour extraire les données
 def scraping(job_cards):
     
     try:
@@ -43,6 +44,7 @@ def scraping(job_cards):
                 'Job Type': job_type if job_type else 'Unspecified'
             })
 
+    # Exception pour le temps d'attente
     except TimeoutException:
         logging.info("Le délai d'attente pour charger la page ou les éléments a été dépassé")
     except NoSuchElementException:
