@@ -41,10 +41,11 @@ def extract_jobs(job_cards):
             })
             
     except NoSuchElementException:
-        print('Element not found')
+        logging.exception('Element not found')
 
     finally:
         driver.quit()
+        logging.info('Data extraction successfully completed.')
 
 
 if __name__ == '__main__':
