@@ -1,7 +1,5 @@
 # Agrégateur en Temps Réel d'Offres d'Emploi
 
-## Idée de Projet : Agrégateur en Temps Réel d'Offres d'Emploi
-
 L'objectif de ce projet est de créer une plateforme qui rassemble automatiquement les annonces d'emploi de différents sites web en temps réel et fournit une API REST pour accéder à ces données.
 
 ---
