@@ -41,6 +41,6 @@ driver.quit()
 if __name__ == '__main__':
     extract_jobs(job_cards)
     
-    # Affiche ou traitez les emplois extraits
+    # Affiche ou traite les emplois extraits
     for job in jobs:
         print(job)
