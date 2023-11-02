@@ -29,13 +29,13 @@ def extract_jobs(job_cards):
 
     try:
         for card in job_cards:
-            job_title = card.find('h2', {'class': 'jobTitle'}).get_text(strip=True)
+            job_title = card.find('h2', {'class': 'jobTitle'})
             company_name_element = card.find('span', {'data-testid': 'company-name'})
             location_element = card.find('div', {'data-testid': 'text-location'})
             job_type_element = card.find('div', {'data-testid': 'attribute_snippet_testid'})
 
             jobs.append({
-                'Job Title': job_title if job_title else 'Non spécifié',
+                'Job Title': job_title.get_text(strip=True) if job_title else 'Non spécifié',
                 'Company Name': company_name_element.get_text(strip=True) if company_name_element else 'Unspecified',
                 'Location': location_element.get_text(strip=True) if location_element else 'Unspecified',
                 'Job Type': job_type_element.get_text(strip=True) if job_type_element else 'Unspecified'
