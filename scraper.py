@@ -50,6 +50,7 @@ def extract_jobs(job_cards):
 if __name__ == '__main__':
     
     logging.info('Starting scraper...')
+    
     extract_jobs(job_cards)
     
     # Affiche ou traite les emplois extraits
