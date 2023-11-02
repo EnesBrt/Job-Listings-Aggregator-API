@@ -17,9 +17,7 @@ url = 'https://www.welcometothejungle.com/fr/jobs?query=Python'
 driver.get(url)
 
 # Attendre que la page soit charge
-WebDriverWait(driver, 10).until(
-    EC.presence_of_element_located((By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR"))
-)
+WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR"))) 
 
 # Recherche des éléments
 job_cards = driver.find_elements(By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR")
