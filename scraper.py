@@ -14,6 +14,7 @@ url = 'https://fr.indeed.com/jobs?q=Python&fromage=1&vjk=1b833041c0b8707f'
 driver.get(url)
 
 jobs = []
+
  # Obtient le code source de la page actuelle
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
@@ -22,12 +23,12 @@ soup = BeautifulSoup(html, 'html.parser')
 job_cards = soup.find_all('td', class_='resultContent')
 
 
+# Récolte les informations ce charque card
 def extract_jobs(job_cards):
 
-# Récolte les informations ce charque card
     try:
         for card in job_cards:
-            job_title = card.find('h2', class_='jobTitle').get_text(strip=True)
+            job_title = card.find('h2', {'class': 'jobTitle'}).get_text(strip=True)
             company_name_element = card.find('span', {'data-testid': 'company-name'})
             location_element = card.find('div', {'data-testid': 'text-location'})
             job_type_element = card.find('div', {'data-testid': 'attribute_snippet_testid'})
@@ -49,7 +50,6 @@ def extract_jobs(job_cards):
 if __name__ == '__main__':
     
     logging.info('Starting scraper...')
-    logging.
     extract_jobs(job_cards)
     
     # Affiche ou traite les emplois extraits
