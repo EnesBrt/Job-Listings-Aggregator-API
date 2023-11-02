@@ -36,9 +36,9 @@ def extract_jobs(job_cards):
 
             jobs.append({
                 'Job Title': job_title if job_title else 'Non spécifié',
-                'Company Name': company_name_element.get_text(strip=True) if company_name_element else 'Non spécifié',
-                'Location': location_element.get_text(strip=True) if location_element else 'Non spécifié',
-                'Job Type': job_type_element.get_text(strip=True) if job_type_element else 'Non spécifié'
+                'Company Name': company_name_element.get_text(strip=True) if company_name_element else 'Unspecified',
+                'Location': location_element.get_text(strip=True) if location_element else 'Unspecified',
+                'Job Type': job_type_element.get_text(strip=True) if job_type_element else 'Unspecified'
             })
             
     except NoSuchElementException:
