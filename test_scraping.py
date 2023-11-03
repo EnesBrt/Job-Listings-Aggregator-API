@@ -54,7 +54,6 @@ if __name__ == '__main__':
     for page_number in range(1, 11):
         
         try:
-            # Corrigez cette partie pour charger la page correcte
             url = f'{base_url}{page_number}'
             driver.get(url)
             time.sleep(2)
