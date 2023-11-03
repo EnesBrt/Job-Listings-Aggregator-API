@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import logging
 import json
+import time
 
 # Configuration du logging pour le débogage
 logging.basicConfig(level=logging.INFO)
@@ -14,22 +15,21 @@ driver = webdriver.Safari()
 driver.implicitly_wait(10)  # Attend jusqu'à 10 secondes pour que les éléments soient trouvés
 
 # Ouverture de la page
-url = 'https://www.welcometothejungle.com/fr/jobs?query=Python'
-driver.get(url)
-
-# Attendre que la page soit charge
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR"))) 
-
-# Recherche des éléments
-job_cards = driver.find_elements(By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR")
+base_url = 'https://www.welcometothejungle.com/fr/jobs?query=python&refinementList%5Boffices.country_code%5D%5B%5D=FR&page='
 
 jobs = []
     
 
 # Fonction pour extraire les données
-def scraping(job_cards):
+def scraping():
+    
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR"))) 
+    job_cards = driver.find_elements(By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR")
     
     try:
+        
+        job_cards = driver.find_elements(By.CSS_SELECTOR, "div.sc-bXCLTC.iiwBSR")
+        
         for card in job_cards:
             company_name = card.find_element(By.CSS_SELECTOR, 'span.sc-ERObt.gTCEVh').text
             job_title = card.find_element(By.CSS_SELECTOR, 'div[role="mark"]').text
@@ -42,30 +42,30 @@ def scraping(job_cards):
                 'Company Name': company_name if company_name else 'Unspecified',
                 'Job Type': job_type if job_type else 'Unspecified'
             })
-
-    # Exception pour le temps d'attente
-    except TimeoutException:
-        logging.info("Le délai d'attente pour charger la page ou les éléments a été dépassé")
-    except NoSuchElementException:
-        logging.info("Un élément n'a pas été trouvé sur la page")
-    finally:
-        driver.quit()
-
+        
+    except:
+        logging.info("Aucune annonce d'emploi n'a été trouvée")
+      
 
 if __name__ == '__main__':
     
-    logging.info("Scraping des annonces d'emploi")
+    logging.info("Début du scraping des annonces d'emploi")
     
-    scraping(job_cards)
-
-    if jobs:
-        for job in jobs:
-            print(job)
-    else:
-        logging.info("Aucune annonce d'emploi n'a été trouvée")
+    for page_number in range(1, 11):
         
+        try:
+            # Corrigez cette partie pour charger la page correcte
+            url = f'{base_url}{page_number}'
+            driver.get(url)
+            time.sleep(2)
+            scraping()
+        except TimeoutException as e:
+            logging.error(f"Erreur de délai d'attente : {e}")
+        except NoSuchElementException as e:
+            logging.error(f"Élément non trouvé : {e}")
+    
+    # Sauvegarde dans un fichier JSON
     with open('jobs.json', 'w') as outfile:
         json.dump(jobs, outfile)
         
-    
     logging.info("Fin du programme")
