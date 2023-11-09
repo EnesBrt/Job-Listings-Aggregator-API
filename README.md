@@ -22,7 +22,7 @@ Cette API permet de créer, lire, mettre à jour et supprimer des annonces d'emp
     
     bashCopy code
     
-    `git  clone  https://github.com/EnesBrt/Real-time-Job-Listings-Aggregator.git]
+    `git  clone  https://github.com/EnesBrt/Job-Listings-Aggregator
     
 2.  Installez les dépendances :
     
