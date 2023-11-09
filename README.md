@@ -150,5 +150,4 @@ Pour toute utilisation de cette API, assurez-vous que votre environnement Python
 -   Remplacez les données JSON dans les commandes `POST` et `PUT` par les informations pertinentes selon vos besoins.
 -   L'ID dans les commandes `PUT` et `DELETE` doit être remplacé par l'ID réel de l'annonce que vous souhaitez mettre à jour ou supprimer.
 -   Assurez-vous que l'API Flask est en cours d'exécution avant d'exécuter ces commandes.
-
-Ces commandes vous permettront d'interagir avec votre API directement depuis le terminal, facilitant le test et la manipulation des données de votre application Flask.
+-   
