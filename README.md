@@ -20,11 +20,11 @@ Cette API permet de créer, lire, mettre à jour et supprimer des annonces d'emp
 
 1.  Clonez le dépôt :
     
-    `git clone https://github.com/EnesBrt/Job-Listings-Aggregator`
+    ```git clone https://github.com/EnesBrt/Job-Listings-Aggregator```
     
 2.  Installez les dépendances :
     
-    `pip install -r requirements.txt`
+    ```pip install -r requirements.txt```
     
 3.  Configurez votre base de données dans `app.py` et `data.py`.
     
@@ -33,7 +33,7 @@ Cette API permet de créer, lire, mettre à jour et supprimer des annonces d'emp
 
 Pour lancer l'API :
 
-`python app.py`
+```python app.py```
 
 #### Base URL
 
@@ -101,37 +101,37 @@ L'API est accessible localement à l'adresse suivante : `http://127.0.0.1:5000/`
 
 Pour déclencher le scraping et l'insertion des données :
 
-`curl http://127.0.0.1:5000/scraping_jobs`
+```curl http://127.0.0.1:5000/scraping_jobs```
 
 #### 2. Obtenir Toutes les Annonces
 
 Pour récupérer la liste de toutes les annonces :
 
-`curl http://127.0.0.1:5000/jobs`
+```curl http://127.0.0.1:5000/jobs```
 
 #### 3. Créer une Nouvelle Annonce
 
 Pour ajouter une nouvelle annonce d'emploi :
 
-`curl -X POST -H  "Content-Type: application/json"  -d  '{"title": "Développeur Python", "location": "Paris", "company_name": "XYZ Corp", "job_type": "Full-time"}'http://127.0.0.1:5000/jobs_post`
+```curl -X POST -H  "Content-Type: application/json"  -d  '{"title": "Développeur Python", "location": "Paris", "company_name": "XYZ Corp", "job_type": "Full-time"}'http://127.0.0.1:5000/jobs_post```
 
 #### 4. Mettre à Jour une Annonce
 
 Pour mettre à jour une annonce existante (remplacer `1` par l'ID de l'annonce) :
 
-`curl -X PUT -H  "Content-Type: application/json"  -d  '{"title": "Senior Python Developer", "location": "Lyon", "company_name": "ABC Inc", "job_type": "Part-time"}'http://127.0.0.1:5000/jobs/1`
+```curl -X PUT -H  "Content-Type: application/json"  -d  '{"title": "Senior Python Developer", "location": "Lyon", "company_name": "ABC Inc", "job_type": "Part-time"}'http://127.0.0.1:5000/jobs/1```
 
 #### 5. Supprimer une Annonce Spécifique
 
 Pour supprimer une annonce spécifique (remplacer `1` par l'ID de l'annonce) :
 
-`curl -X DELETE http://127.0.0.1:5000/jobs/1`
+```curl -X DELETE http://127.0.0.1:5000/jobs/1```
 
 #### 6. Supprimer Toutes les Annonces
 
 Pour supprimer toutes les annonces :
 
-`curl -X DELETE http://127.0.0.1:5000/jobs`
+```curl -X DELETE http://127.0.0.1:5000/jobs```
 
 ---
 #### Sécurité et Authentification
