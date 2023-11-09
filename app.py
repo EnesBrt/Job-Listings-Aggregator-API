@@ -15,7 +15,7 @@ db = SQLAlchemy(app)
 
 
 class JobListing(db.Model):
-    # model de la base de données qui représente la table joblistings
+    # model de la base de données qui représente la table job_listings
     __tablename__ = 'job_listings'
     
     job_id = db.Column(db.Integer, primary_key=True)
@@ -44,8 +44,8 @@ class JobListing(db.Model):
             driver = webdriver.Safari()
             driver.implicitly_wait(10)
             base_url = 'https://www.welcometothejungle.com/fr/jobs?query=python&refinementList%5Boffices.country_code%5D%5B%5D=FR&page='
-            jobs = scraping(driver, base_url)  # Passez l'instance de driver et base_url
-            driver.quit()  # Assurez-vous de fermer le driver après l'utilisation
+            jobs = scraping(driver, base_url)
+            driver.quit() 
         
         except Exception as e:
             return jsonify({"error": str(e)}), 500

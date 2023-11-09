@@ -11,7 +11,7 @@ def data_preprocessing():
     df = pd.json_normalize(json_data)
     df['Job Title'] = df['Job Title'].str.replace('cdi', '', case=False).str.strip()
 
-    # Correct the column names to match the database schema
+   
     df = df.rename(columns={
         'Job Title': 'title',
         'Job Location': 'location',
@@ -19,8 +19,7 @@ def data_preprocessing():
         'Job Type': 'job_type'
     })
 
-    return df  # Now it returns the DataFrame
-
+    return df  
 
 def database_insertion(df):
 

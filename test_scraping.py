@@ -45,7 +45,7 @@ def scraping(driver, base_url):
     with open('jobs.json', 'w') as outfile:
         json.dump(jobs, outfile)
 
-    return jobs  # Retourne les jobs collectés
+    return jobs 
 
 if __name__ == '__main__':
     logging.info("Début du scraping des annonces d'emploi")
