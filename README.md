@@ -24,8 +24,6 @@ Cette API permet de créer, lire, mettre à jour et supprimer des annonces d'emp
     
 2.  Installez les dépendances :
     
-    bashCopy code
-    
     `pip install -r requirements.txt`
     
 3.  Configurez votre base de données dans `app.py` et `data.py`.
@@ -34,8 +32,6 @@ Cette API permet de créer, lire, mettre à jour et supprimer des annonces d'emp
 ## Utilisation de l'API
 
 Pour lancer l'API :
-
-bashCopy code
 
 `python app.py`
 
