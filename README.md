@@ -105,15 +105,11 @@ L'API est accessible localement à l'adresse suivante : `http://127.0.0.1:5000/`
 
 Pour déclencher le scraping et l'insertion des données :
 
-bashCopy code
-
 `curl http://127.0.0.1:5000/scraping_jobs`
 
 #### 2. Obtenir Toutes les Annonces
 
 Pour récupérer la liste de toutes les annonces :
-
-bashCopy code
 
 `curl http://127.0.0.1:5000/jobs`
 
@@ -121,15 +117,11 @@ bashCopy code
 
 Pour ajouter une nouvelle annonce d'emploi :
 
-bashCopy code
-
 `curl -X POST -H  "Content-Type: application/json"  -d  '{"title": "Développeur Python", "location": "Paris", "company_name": "XYZ Corp", "job_type": "Full-time"}'http://127.0.0.1:5000/jobs_post`
 
 #### 4. Mettre à Jour une Annonce
 
 Pour mettre à jour une annonce existante (remplacer `1` par l'ID de l'annonce) :
-
-bashCopy code
 
 `curl -X PUT -H  "Content-Type: application/json"  -d  '{"title": "Senior Python Developer", "location": "Lyon", "company_name": "ABC Inc", "job_type": "Part-time"}'http://127.0.0.1:5000/jobs/1`
 
@@ -137,15 +129,11 @@ bashCopy code
 
 Pour supprimer une annonce spécifique (remplacer `1` par l'ID de l'annonce) :
 
-bashCopy code
-
 `curl -X DELETE http://127.0.0.1:5000/jobs/1`
 
 #### 6. Supprimer Toutes les Annonces
 
 Pour supprimer toutes les annonces :
-
-bashCopy code
 
 `curl -X DELETE http://127.0.0.1:5000/jobs`
 
