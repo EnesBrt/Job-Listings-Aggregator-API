@@ -1,4 +1,4 @@
-# Real-time Job Listings Aggregator API
+# Job Listings Aggregator API
 
 ## Description
 
