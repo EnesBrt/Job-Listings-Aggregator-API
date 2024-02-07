@@ -152,17 +152,6 @@ curl -X DELETE http://127.0.0.1:5000/jobs
 ```
 
 ---
-#### Sécurité et Authentification
-
-Cette API est actuellement configurée pour un usage local sans authentification. Pour un déploiement en production, il est recommandé d'implémenter des mécanismes d'authentification et de sécurisation (comme HTTPS, tokens d'authentification, etc.).
-
-#### Tests
-
-Il est conseillé de tester l'API à l'aide d'outils tels que Postman ou Curl pour valider le bon fonctionnement des différents endpoints.
-
-Pour toute utilisation de cette API, assurez-vous que votre environnement Python est configuré correctement et que toutes les dépendances nécessaires sont installées.
-
----
 ### Notes Importantes
 
 -   Remplacez les données JSON dans les commandes `POST` et `PUT` par les informations pertinentes selon vos besoins.
